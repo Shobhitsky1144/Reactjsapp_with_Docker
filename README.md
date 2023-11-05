@@ -80,8 +80,27 @@ export default defineConfig({
 
 STEP 3==> docker-composeup
 
+
+
+>>>>>>>>>>>>>>>==================================END==================================================>>>>>>>>>>>>>>>>>
+
 Description:
 This project setup allows for the development of a React.js application using Vite and Docker. The Dockerfile sets up the Node.js environment and installs the necessary dependencies. The viteconfig.ts file configures Vite for React, enabling faster development. The docker-compose file coordinates the building and running of the Docker container.
+
+FROM NODE:ALPINE :
+Docker will choose the node:alpine image to build this env. You can choose node:lts, node:latest but I prefer alpine as it's small in size and suitable for production as well.
+
+container_name: vite_docker
+The container name will be vite_docker which we will use to execute future commands and refer to this application.
+
+ports :
+The ports on which the application will run, in our case 8000, and with this mapping, we will be able to access the host machine using the same port.
+
+working_dir
+The working_dir is the directory for the project within the container. When you log into the container, you will land in this directory.
+
+BIND:
+Here I am using type: bind which allows us to do this and update the files within the container as we update/ add anything in the host and vice versa.
 
 Instructions:
 Clone the repository using git clone https://github.com/Shobhitsky1144/Reactjsapp_with_Docker.
