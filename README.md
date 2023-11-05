@@ -78,7 +78,7 @@ export default defineConfig({
   }
 })
 
-STEP 3==> docker-composeup
+STEP 3==> docker-compose up
 
 
 
@@ -110,5 +110,19 @@ Run docker-compose up to build and start the container.
 Access the application at localhost:5173.
 
 
+========================> Here's a step-by-step guide to push your Docker image to Docker Hub  ============>>>>>>>>>
 
+
+Build the Docker image with the appropriate tag. Replace my-react-docker-repo with your preferred tag name.
+
+
+docker build -t shobhitsky1144/my-react-docker-repo .
+docker images
+docker login
+docker push shobhitsky1144/my-react-docker-repo:latest
+After following these steps, your Docker image should be successfully pushed to Docker Hub under the specified tag. Make sure to replace shobhitsky1144 with your actual Docker Hub username.
+
+========================> Here's a step-by-step guide to PULL your Docker image from Docker Hub  ============>>>>>>>>>
+
+docker pull shobhitsky1144/my-react-docker-repo
 
